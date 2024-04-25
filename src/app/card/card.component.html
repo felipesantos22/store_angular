@@ -1,0 +1,22 @@
+<div class="card">
+    <select
+      class="form-select"
+      aria-label="Default select example"
+      style="width: 180px"
+    >
+      <option selected>Filtros</option>
+      <option value="asc">Menor preço</option>
+      <option value="desc">Maior preço</option>
+      <option value="alfa">Ordem alfabética</option>
+    </select>
+    <div class="center">
+      <div class="article-card" *ngFor="let dataList of data">
+        <div class="content">
+          <p class="title">{{ dataList.title }}</p>
+          <p class="title">R${{ dataList.price }}</p>
+        </div>
+        <img src="{{ dataList.image }}" alt="article-cover" />
+      </div>
+    </div>
+  </div>
+  
